@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Все тесты" parallel="classes" thread-count="2">
+    <groups>
+        <run>
+            <include name="XYZBank"/>
+            <exclude name="RestTest"/>
+            <exclude name="SelenidePage"/>
+            <exclude name="ToolsQA"/>
+        </run>
+    </groups>
+    <test name="UI тесты (Selenide)">
+        <packages>
+            <package name="com.testing.tests.selenidepage"/>
+        </packages>
+    </test>
+    <test name="API тесты (Rest Assured)">
+        <packages>
+            <package name="com.testing.tests.apitest"/>
+        </packages>
+    </test>
+    <test name="UI тесты xyz банк">
+        <packages>
+            <package name="com.testing.tests.xyzbank"/>
+        </packages>
+    </test>
+    <test name="UI тесты ToolsQa">
+        <packages>
+            <package name="com.testing.tests.toolsqa"/>
+        </packages>
+    </test>
+</suite>
+
