@@ -3,9 +3,7 @@ package com.testing.tests.apitest.steps;
 import com.testing.pojo.AddUserRequestPojo;
 import com.testing.pojo.AddUserResponsePojo;
 import com.testing.pojo.UserPojo;
-import io.restassured.builder.RequestSpecBuilder;
-import io.restassured.http.ContentType;
-import io.restassured.specification.RequestSpecification;
+
 import static com.testing.utils.RestAPIHelper.*;
 
 import java.util.List;

@@ -1,12 +1,9 @@
 package com.testing.tests.apitest;
 
-import com.testing.pojo.AddUserRequestPojo;
-import com.testing.pojo.AddUserResponsePojo;
 import com.testing.pojo.UserPojo;
 import com.testing.tests.BaseTest;
 import com.testing.tests.apitest.steps.UserSteps;
 import io.qameta.allure.*;
-import io.restassured.http.ContentType;
 import org.testng.annotations.Test;
 
 import java.util.List;

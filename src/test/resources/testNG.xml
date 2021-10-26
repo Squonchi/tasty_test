@@ -3,8 +3,9 @@
 <suite name="Все тесты" parallel="classes" thread-count="2">
     <groups>
         <run>
-            <include name="XYZBank"/>
+            <exclude name="RestTestColor"/>
             <exclude name="RestTest"/>
+            <include name="XYZBank"/>
             <exclude name="SelenidePage"/>
             <exclude name="ToolsQA"/>
         </run>

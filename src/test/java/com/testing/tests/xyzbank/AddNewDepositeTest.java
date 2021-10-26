@@ -1,5 +1,6 @@
 package com.testing.tests.xyzbank;
 
+import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import com.testing.pages.XYZBankPage;
 import com.testing.tests.BaseTest;
@@ -7,6 +8,8 @@ import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Story;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import static com.codeborne.selenide.Condition.text;
@@ -19,6 +22,17 @@ import static com.codeborne.selenide.Selenide.*;
 @Story("Проверка создания нового депозита")
 public class AddNewDepositeTest extends BaseTest {
     XYZBankPage page = new XYZBankPage();
+
+    @BeforeClass
+    public void setUp() {
+        Configuration.remote = "http://localhost:4444/wd/hub";
+        Configuration.browser = "chrome";
+        Configuration.browserSize = "1920x1080";
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability("enableVNC", true);
+        capabilities.setCapability("enableVideo", true);
+        Configuration.browserCapabilities = capabilities;
+    }
 
     @Test(description = "Проверка создания нового депозита")
     public void testAddingNewDeposite() throws InterruptedException {

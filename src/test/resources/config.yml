@@ -1,0 +1,7 @@
+---
+restAPIUrl: "https://reqres.in/api"
+
+xyzBankURL: &xyzBankURL "https://www.globalsqa.com/angularJs-protractor/BankingProject"
+toolsQAURL: &toolsQAURL "https://demoqa.com/automation-practice-form"
+
+uiURL: *xyzBankURL

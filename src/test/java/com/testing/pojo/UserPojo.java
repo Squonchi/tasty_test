@@ -9,7 +9,7 @@ import lombok.Data;
 public class UserPojo {
 	@JsonProperty(value = "last_name")
 	private String lastName;
-	private int id;
+	private Integer id;
 	private String avatar;
 	@JsonProperty(value = "first_name")
 	private String firstName;

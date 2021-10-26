@@ -12,8 +12,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @Test(groups = {"RestTest"})
 @Owner("Жуков Андрей")
-@Epic("Тестирование API reqres.in")
-@Feature("Ресурс users")
+@Epic("Reqres.in")
+@Feature("Users")
 @Story("Проверка имени нового пользователя")
 public class NewUserNameTest extends BaseTest {
 

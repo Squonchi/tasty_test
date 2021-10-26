@@ -1,5 +1,6 @@
 package com.testing.utils;
 
+import io.qameta.allure.restassured.AllureRestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
@@ -13,6 +14,7 @@ public class RestAPIHelper {
             new RequestSpecBuilder()
                     .setBaseUri("https://reqres.in/api")
                     .setContentType("application/json; charset=UTF-8")
+                    .addFilter(new AllureRestAssured().setRequestTemplate("http-request.ftl").setResponseTemplate("http-response.ftl"))
                     .build();
 
     public static Response sendGet(@NotNull String path, Integer expectedCode) {
@@ -21,7 +23,6 @@ public class RestAPIHelper {
                 .basePath(path)
                 .when().get()
                 .then()
-                .log().body()
                 .statusCode(expectedCode)
                 .extract().response();
     }

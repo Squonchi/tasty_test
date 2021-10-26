@@ -24,7 +24,7 @@ import static com.codeborne.selenide.Selenide.*;
 public class SelenideMainMenuTest extends BaseTest {
     SelenidePage page = new SelenidePage();
 
-    @Test(enabled = false)
+    @Test
     public void testSearchVTBWithGoogle() {
         open("https://google.ru");
         element(byName("q")).setValue("vtb").pressEnter();
@@ -33,7 +33,7 @@ public class SelenideMainMenuTest extends BaseTest {
     }
 
 
-    @Test(enabled = false)
+    @Test
     public void testSearchSelenideWithXPath() {
         $x("//input[@name='q']").setValue("selenide").pressEnter();
         $$x("//h3[@class='LC20lb DKV0Md']").first().shouldHave(text("Selenide: лаконичные и стабильные UI тесты на Java"))
@@ -43,7 +43,7 @@ public class SelenideMainMenuTest extends BaseTest {
         $x("//div[@class='wrapper-color-content']/h4").shouldHave(text("Плохой софт не имеет документации. Отличный софт не нуждается в документации."));
     }
 
-    @Test(enabled = false)
+    @Test
     public void testSearchSelenideWithCSS() {
         searchWordWithGoogle("selenide");
         openSomeGoogleResult(0);

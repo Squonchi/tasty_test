@@ -16,7 +16,7 @@ public class XYZBankPage {
     }
 
     public SelenideElement userSelectList() {
-        return $("select[ng-model='custId']");
+        return $("select[ng-model='custId']").as("Выбор пользователя");
     }
 
     public SelenideElement loginButton() {
@@ -25,7 +25,7 @@ public class XYZBankPage {
 
     public SelenideElement transactionsChooseButton() throws InterruptedException {
         Thread.sleep(500);
-        return $("[ng-click='transactions()']");
+        return $("[ng-click='transactions()']").shouldBe();
     }
 
     public SelenideElement depositChooseButton() {
